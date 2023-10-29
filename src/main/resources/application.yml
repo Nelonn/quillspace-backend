@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/quillspace_dev?serverTimezone=UTC
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: user
+    password: pass
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+rsa:
+  private-key: classpath:certs/private.pem
+  public-key: classpath:certs/public.pem
+
+articles:
+  max-title-length: 100
+  max-summary-length: 500
+  max-content-length: 5000
